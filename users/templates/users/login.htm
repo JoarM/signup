@@ -4,7 +4,7 @@
 
     <div class="box">
         <form action="{% url 'login' %}" method="post" autocomplete="off">
-            <h2>Sign in</h2>
+            <h2>Login</h2>
             {% csrf_token %}
             <div class="inputBox">
                 <input type="text" name="username" required="requierd">

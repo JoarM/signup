@@ -2,13 +2,22 @@
 
 {% block body %}
 
-    <h1 class="gradientText">Welcome, {{ request.user.first_name }}</h1>
+    <div id="indexBox">
+        <div id="indexBoxForm">
+            <h1 class="gradientText">Welcome, {{ request.user.first_name }}</h1>
 
-    <ul>
-        <li class="gradientText">Username: {{ request.user.username }}</li>
-        <li class="gradientText">Email: {{ request.user.email }}</li>
-    </ul>
+            <ul>
+                <li class="gradientText">Username: {{ request.user.username }}</li>
+                <li class="gradientText">Email: {{ request.user.email }}</li>
+            </ul>
 
-    <a href="{% url 'logout' %}"><button class="gradientBtn">Log out</button></a>
+            <div class="buttonContainer">
+                <a href="{% url 'logout' %}"><button class="gradientBtn">Log out</button></a>
+            </div>
+            
+        </div>
+        
 
+    </div>
+    
 {% endblock %}
