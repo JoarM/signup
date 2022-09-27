@@ -2,16 +2,26 @@
 
 {% block body %}
 
-    {% if message %}
-        <div>{{ message }}</div>
-    {% endif %}
+    <div class="box">
+        <form action="{% url 'login' %}" method="post" autocomplete="off">
+            <h2>Sign in</h2>
+            {% csrf_token %}
+            <div class="inputBox">
+                <input type="text" name="username" required="requierd">
+                <span>Userame</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" required="requierd">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="">{{ message }}</a>
+                <a href="{% url 'signup' %}">Signup</a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
 
-    <form action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Login">
-    </form>
-
-    <a href="{% url 'signup' %}">Signup</a>
 {% endblock %}

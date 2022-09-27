@@ -1,13 +1,44 @@
 {% extends "users/layout.htm" %}
 
 {% block body %}
-<form action="{% url 'signup' %}" method="post">
+
+<div id="signupBox">
+    <form action="{% url 'signup' %}" method="post" autocomplete="off">
+    <h2>Sign up</h2>
     {% csrf_token %}
-    <input type="text" name="username" placeholder="Username">
-    <input type="text" name="firstname" placeholder="Firsname">
-    <input type="text" name="lastname" placeholder="Lastname">
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Login">
+    <div class="inputBox">
+        <input type="text" name="username" required="requierd">
+        <span>Username</span>
+        <i></i>
+    </div>
+    <div class="inputBox">
+        <input type="text" name="firstname" required="requierd">
+        <span>Firstname</span>
+        <i></i>
+    </div>
+    <div class="inputBox">
+        <input type="text" name="lastname" required="requierd">
+        <span>Lastname</span>
+        <i></i>
+    </div>
+    <div class="inputBox">
+        <input type="email" name="email" required="requierd">
+        <span>Email</span>
+        <i></i>
+    </div>
+    <div class="inputBox">
+        <input type="password" name="password" required="requierd">
+        <span>Password</span>
+        <i></i>
+    </div>
+    
+    <div class="links">
+        <a href=""></a>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+
+    <input type="submit" value="Sign up">
 </form>
+</div>
+
 {% endblock %}
