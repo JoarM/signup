@@ -283,28 +283,17 @@ input[type="submit"]:active
     -moz-text-fill-color: transparent;
 }
 
-.gradientBtn{
-    background-color: red;
-  
-    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+.mainBtn{  
+	background: -webkit-linear-gradient(45deg, #f3ec78, #af4261);
+    background: linear-gradient(45deg, #f3ec78, #af4261);
 
     padding: 15px;
-
     padding-left: 20px;
-
     padding-right: 20px;
-
     border: none;
-
     border-radius: 2.5rem;
-
     font-size: 16px;
-
 	margin: 15px;
-}
-
-.gradientBtn:hover{
-    background-image: linear-gradient(45deg, #7899f3, #42af78);
 }
 
 .buttonContainer{
